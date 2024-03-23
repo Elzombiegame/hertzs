@@ -1,14 +1,25 @@
 *{
     box-sizing: border-box;
+    font-family: comic sans ms;
+
 }
 .container{
     display: flex;
     justify-content: center;
-
     
+}
+body{
+    background-image: url(../img/9ca8653425cab3976aaa55ff59743612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 5s;
+    margin: 0px;
+
 }
 img{
     height:70vh;
+    transition: 0.2s;
+    user-select: none;
 }
 
 .vida{
@@ -17,11 +28,13 @@ img{
     height: 10vh;
     border: 4px solid black;
     position: fixed;
+    background-color: red;
+
 }
 .vida2{
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: rgb(150, 4, 179);
 }
 .vidaTexto{
     position: absolute;
@@ -34,13 +47,83 @@ img{
 #win{
     text-align: center;
 }
+.nokia{
+    display: none;
+}
+
+
+.jugar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    button{
+        margin-top: 20px;
+        font-size: 50px;
+
+    }
+    h1{
+        background-color: white;
+        padding: 15px;
+        font-size: 50px;
+        border-radius: 10px;
+    }
+}
+.sukunawins{
+    background-color: white;
+    margin: 5px;
+    font-size: 40px;
+}
+
+@keyframes movimientoIzquieda {
+    0%{transform: rotate(0deg) translate(0px)}
+    50%{transform: rotate(5deg)translate(50px)}
+    100%{transform: rotate(0deg)translate(0px)}
+
+}
+@keyframes movimientoDerecha {
+    0%{transform: rotate(0deg)translate(0px)}
+    50%{transform: rotate(-5deg)translate(-50px)}
+    100%{transform: rotate(0deg)translate(0px)}
+
+}
+@keyframes background {
+    0%{
+        body{
+            filter: opacity(100%);
+        }
+        }
+    100%{ 
+        body{
+        filter: opacity(0%);
+    }}
+}
 @media (width < 720px) {
     .gojoMuerto{
         width: 100%;
         height: 70vw;
+        
     }
     .muerto{
         width: 100%;
 
     }
+    body{
+        height:100vh;
+    width:100vw;
+    }
+    .jugar img{
+        width: 100%;
+        height: 50%;
+    }
+/*
+    .nokia{
+        display: block;
+        color: white;
+    }
+
+    .jugar button{
+        display: none;
+    }
+*/
 }

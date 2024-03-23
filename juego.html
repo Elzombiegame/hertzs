@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sukuna Simulatos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="fondo" onmouseup="musica.play();">
+    <div class="nokia"  >
+        <h1>tu frijolaifon no aguanta tal expancion de dominio</h1>
+    </div>
+    <div class="jugar" id="menu">
+        <h1>Sukuna-simulator</h1>
+        <img src="img/inicio.jpg" alt="">
+
+        <button onclick="jugar()">Jugar</button>
+    </div>
+
+    <div id="gameplay" style="display: none;" >
+        <div class="container" id="satoru" onclick="contadorVida(),animacion()">
+            <img src="img/Satoru_Gojo_29.webp" id="gojoVivo">
+            <img src="img/amogus.png" style="display: none;"  class="gojoMuerto" id="gojoMuerto">
+        </div>
+        <div class="container">
+            <div class="vida">
+                <h1 class="vidaTexto">Vida</h1>
+                <div class="vida2" id="vida"></div>
+            </div>
+        </div>
+   </div>
+    
+
+   <div style="display: none;" id="win">
+    <h1 class="sukunawins">sukuna wins</h1>
+    <img src="img/gojo.jpg" class="muerto" alt="">
+   </div>
+
+   <audio src="audio/sukuna.mp3" id="audio"></audio>
+   <audio src="audio/musiquita.mp3" autoplay id="musica"></audio>
+
+   <script src="js/script.js"></script>
+   v2
+
+</body>
+</html>
