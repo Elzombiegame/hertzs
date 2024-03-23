@@ -1,12 +1,16 @@
+@font-face {
+    font-family: jjk;
+    src: url(../font/jujutsuKaisen.ttf);
+}
 *{
     box-sizing: border-box;
-    font-family: comic sans ms;
-
+    /*font-family: comic sans ms;*/
+    font-family: jjk;
 }
 .container{
     display: flex;
     justify-content: center;
-    
+    align-items: center;
 }
 body{
     background-image: url(../img/9ca8653425cab3976aaa55ff59743612.jpg);
@@ -14,7 +18,7 @@ body{
     background-size: cover;
     transition: 5s;
     margin: 0px;
-
+    overflow-x: hidden;
 }
 img{
     height:70vh;
@@ -72,8 +76,42 @@ img{
 .sukunawins{
     background-color: white;
     margin: 5px;
-    font-size: 40px;
+    font-size: 50px;
+    -webkit-text-stroke: rgba(255, 0, 0, 0.534) 1px;
+
 }
+.Feliz{
+    -webkit-text-stroke: white 3px;
+    font-size: 60px;
+    font-family: comic sans ms;
+}
+.tijeras{
+    text-align: center;
+    height: 200px;
+    position: relative;
+
+}
+.corte{
+    height: 5px;
+    width: 300vw;
+    position: relative;
+    background-color: red;
+    animation-direction: normal;
+
+}
+.cortecontainer{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    animation: cortar 10s;
+}
+@keyframes cortar {
+    0%{transform: translateX(400vw);}
+    100%{transform: translateX(-100vw);}
+
+}
+
 
 @keyframes movimientoIzquieda {
     0%{transform: rotate(0deg) translate(0px)}
