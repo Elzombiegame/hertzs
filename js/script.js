@@ -23,7 +23,7 @@ function contadorVida() {
             win.style = "display: block;"
         }, 18000);
     }else{
-        i= i-50;
+        //i= i-50;
         i--;
         vida.style = "    width: "+i+"%;";
     }
